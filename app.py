@@ -11,7 +11,7 @@ search_term = st.text_input("Search by Chemical Name:")
 
 # Filter and display
 if search_term:
-    result = df[df['Chemical Name'].str.contains(search_term, case=False, na=False)]
+    result = df[df['Chemical name'].str.contains(search_term, case=False, na=False)]
     st.dataframe(result)
 else:
     st.info("Type a chemical name to begin.")
